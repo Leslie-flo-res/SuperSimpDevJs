@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable Exercises</title>
+</head>
+<body>
+<!--5h-->
+  <p> Cart Quantity </p>
+
+  <button onclick="console.log('Cart Quantity:'+ cartQuantity)"> Show Quantity</button>
+<button onclick="console.log(`Cart Quantity: ${cartQuantity += 1}`)"> Add To Cart </button> <!--cartQuantity++; same as line above  --->
+<button  onclick="console.log(`Cart Quantity: ${cartQuantity += 2}`)"> +2 </button>
+<button onclick="console.log(`Cart Quantity: ${cartQuantity += 3}`)">+3</button>
+<button onclick="console.log(`Cart Quantity: ${cartQuantity += 4}`)">+4</button>
+<button onclick="console.log(`Cart Quantity: ${cartQuantity += 5}`)">+5</button>
+<button  onclick="console.log(`Cart Quantity: ${cartQuantity = 0}`)">Reset Cart</button>
+<!--5i--->
+<button onclick="console.log(`Cart Quantity: ${cartQuantity -=1}`)">Remove from Cart</button>
+<!--5j--->
+<button onclick="console.log(`Cart Quantity: ${cartQuantity -= 2}`)">Remove 2 from Cart</button>
+<button onclick="console.log(`Cart Quantity: ${cartQuantity -= 3}`)">Remove 3 from Cart</button>
+
+
+
+  <script>
+  //5a
+    const name = "Jane Doe"
+  //5b 
+    console.log(`My name is: ${name}`);
+  //5c 
+    let coffee=5;
+    let bagel=3;
+    let soup=9;
+    let cost=coffee+(2*bagel)+soup;
+    //5d
+    console.log(`Cost of food: $${cost}`);
+    //5e
+    let tax=0.1;
+    let totalTax = cost*tax;
+    //5f
+    console.log(`Tax 10%: ${totalTax}`);
+    //5g
+    let totalCost=cost+totalTax;
+    console.log(`Total Cost :$${totalCost}`);
+    //5h
+    let cartQuantity=0;
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
