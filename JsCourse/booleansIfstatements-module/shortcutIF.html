@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If statements Shortcuts</title>
+</head>
+<body>
+  
+<script>
+
+const example=true?'left side ':'right side';
+console.log(example); 
+// expected result ample='left side '
+
+const example1=false?'left side ':'right side';
+console.log(example1); 
+// expected result ample='right side '
+
+// Guard operator && aka short circuit evaluation,stops if first value is false. "guarding " code on the right.
+
+const message= false && 'hello';
+console.log(message);
+// result in log in false 
+const message1= 5 && 'hello';
+console.log(message1);
+// result in log in hello 
+
+// Default Operator ||  aka short circuit evaluation
+const currency="EUR" || 'USD';
+console.log(currency);
+// result in log is EUR since left side is true. 
+
+const currency1= undefined || 'USD';
+console.log(currency1);
+// result in log is USD since left side is not defined. therefore creating a default selection such as usd. 
+
+
+/***    
+true ? 'truthy ': 'falsy' 
+If statement shortcut, which can also be used in a variable.
+ex: const example = true? 'truthy' : 'falsy';
+console.log(result);
+log displays truthy since the result is now saved in the variable 
+
+***/
+
+</script>
+
+</body>
+</html>
