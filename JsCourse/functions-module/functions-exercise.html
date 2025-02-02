@@ -57,7 +57,8 @@ function convertTemperature(degrees,unit){
 console.log(convertTemperature(86,'F')); 
 console.log(convertTemperature(25,'C')); 
 
-//7g
+//7g 
+//7h include feet 
 function convertLength(length,from,to ){
  
   if(from === 'miles' && to === 'km'){to= length * 1.6
@@ -66,17 +67,30 @@ return ` Conversion of ${length} ${from} is ${to} km`;}
   if (from === 'km'  && to === 'miles'){to = length / 1.6
   return ` Conversion of ${length} ${from} is  ${to} miles`;}
 
+  
+  if (from === 'miles'  && to === 'ft' ){to = length *5280
+  return ` Conversion of ${length} ${from} is  ${to} ft`;}
+  
+  if (from === 'km'  && to === 'ft' ){to = length *3281
+    return ` Conversion of ${length} ${from} is  ${to} ft`;}
+
    if  (from === 'km'&& to === 'km' ){ return ` ${length } ${from} to ${length } ${to} `}
    if  (from === 'miles'&& to === 'miles' ){ return ` ${length } ${from} to ${length } ${to} `}
 
+   //7i
+if ( from !=='miles'&& from !== 'km' && from !== 'ft') {return `Invalid unit: ${from}`}
 
-
+ else if ( to !=='miles'&& to !== 'km' && to !== 'ft') {return `Invalid unit: ${to}`};
 };
 
 console.log(convertLength(50,'miles','km'));
 console.log(convertLength(32,'km','miles'));
 console.log(convertLength(50,'km','km'));
 console.log(convertLength(50,'miles','miles'));
+console.log(convertLength(5,'miles','km'));
+console.log(convertLength(5,'miles','ft'));
+console.log(convertLength(5,'km','ft'));
+console.log(convertLength(5,'lbs','lbs'));
 
   </script>
 </body>
