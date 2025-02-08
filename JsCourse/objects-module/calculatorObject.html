@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator-Object Update </title>
+</head>
+<body> <!--exercise 8h --->
+  <p>
+      
+<button onclick=" updateCalculator(1)">1</button>
+<button onclick="updateCalculator(2)">2</button>
+<button onclick="updateCalculator(3) ">3</button>
+<button onclick="updateCalculator('+') ">+</button>
+  </p>
+  <p>
+    <button onclick="updateCalculator(4);">4</button>
+    <button onclick="updateCalculator(5);">5</button>
+    <button onclick="updateCalculator(6);">6</button>
+    <button onclick="updateCalculator('-');">-</button>
+    </p>
+
+    <p>
+      <button onclick="updateCalculator(7);">7</button>
+      <button onclick="updateCalculator(8);">8</button>
+      <button onclick="updateCalculator(9);">9</button>
+      <button onclick="updateCalculator('*');">*</button>
+      </p>
+      <p>
+        <button onclick="updateCalculator(0);">0</button>
+        <button onclick="updateCalculator('.');"> . </button>
+        <button onclick ="updateCalculator('/');">/ </button>
+        <button onclick="calculation = eval(calculation); localStorage.setItem('result',`${calculation}`);console.log(calculation);">=</button>
+
+      </p>
+<script>
+console.log(localStorage.getItem('result')|| 'no calculation found in localStorage ');
+
+let calculation=" ";
+function updateCalculator(value){
+calculation += value;
+
+return console.log(calculation) 
+};
+
+</script>
+</body>
+</html>
