@@ -6,15 +6,23 @@
     <title>Dom</title>
 
     <style>
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
       .suscribe-btn {
         border: none;
         background-color: black;
         color: white;
-        padding:10px 15px;
+        padding: 10px 15px;
         border-radius: 50px;
-        font-weight:bold;
+        font-weight: bold;
         cursor: pointer;
       }
+      .is-subscribed {
+        background-color: rgb(240, 240, 240);
+        color: black;
+      }
+    
     </style>
   </head>
   <body>
@@ -52,8 +60,10 @@
         const buttElement = document.querySelector(".js-sus-butt");
         if (buttElement.innerText === "Subscribe") {
           buttElement.innerText = "Subscribed";
+          buttElement.classList.add("is-subscribed");
         } else {
           buttElement.innerText = "Subscribe";
+          buttElement.classList.remove("is-subscribed");
         }
       }
     </script>
