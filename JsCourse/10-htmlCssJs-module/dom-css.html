@@ -6,7 +6,7 @@
     <title>Dom</title>
 
     <style>
-        body{
+      body {
         font-family: Arial, Helvetica, sans-serif;
       }
       .suscribe-btn {
@@ -22,7 +22,18 @@
         background-color: rgb(240, 240, 240);
         color: black;
       }
-    
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+      .total-button {
+        background-color: green;
+        color: white;
+        font-size: 15px;
+        padding:12px 15px;
+        border:none;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -34,11 +45,11 @@
     <p>Amazon Shipping Calculator</p>
     <input
       placeholder="Cost Of Order"
-      class="js-costInput"
+      class="js-costInput cost-input"
       onkeydown=" handleCostKeydown(event)"
     />
-    <button onclick="calculateTotal()">Calculate</button>
-    <p class="js-total-cost"></p>
+    <button class="total-button" onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost "></p>
     <script>
       function handleCostKeydown(event) {
         if (event.key === "Enter") {
