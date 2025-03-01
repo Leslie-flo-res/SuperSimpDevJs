@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercises</title>
+    <style>
+    .amazonBtn {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        padding: 10px 80px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+      }
+      .requestBtn {
+        background-color: black;
+        color: white;
+      }
+
+      .scheduleBtn {
+        background-color: rgb(230, 230, 230);
+        color: black;
+      }
+      .uberBtn {
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .toggleBtn {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300px;
+        cursor: pointer;
+      }
+
+      .isToggled {
+        background-color: rgb(230, 230, 230);
+        color: black;
+      }      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+      .total-button {
+        background-color: green;
+        color: white;
+        font-size: 15px;
+        padding:12px 15px;
+        border:none;
+        cursor: pointer;
+      }
+   .errorMsg{
+    color:red;
+  
+   }
+    </style>
+  </head>
+  <body>
+    <p>10A:</p>
+    <button class="amazonBtn">Add To Cart</button>
+    <hr />
+    <p>10B:</p>
+    <button class="uberBtn requestBtn">Request Now</button>
+    <button class="uberBtn scheduleBtn">Schedule For Later</button>
+    <hr />
+    <p>10C:</p>
+    <button class="js-button">Test</button>
+    <hr />
+    <p>10D:</p>
+    <button onclick="toggleBtn()" class="toggleBtn">Gaming</button>
+    <hr>
+    <p>10E;</p>
+    <button onclick="toggleBtn('.gmeBtn')" class="toggleBtn gmeBtn">Gaming</button>
+    <button onclick="toggleBtn('.musicBtn')" class="toggleBtn musicBtn">Music</button>
+    <button onclick="toggleBtn('.techBtn')" class="toggleBtn techBtn">Tech</button>
+<hr>
+<p>10h</p>
+ <p>Amazon Shipping Calculator</p>
+    <input
+      placeholder="Cost Of Order"
+      class="js-costInput cost-input"
+      onkeydown=" handleCostKeydown(event)"
+    />
+    <button class="total-button" onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost "></p>
+    <p class=errorMsg></p>
+
+    <script>
+      const test = document.querySelector(".js-button");
+      console.log(test.classList.contains("js-button"));
+
+      // function toggleBtn() {
+      //   const btnStatus = document.querySelector(".toggleBtn");
+      //   if (btnStatus.classList.contains('isToggled')){
+      //     btnStatus.classList.remove('isToggled')
+      //   }
+      //   else {btnStatus.classList.add('isToggled')}
+      // }
+
+      // 10f (buttons can be on/off )Had to look up course code...my error was not separating buttons with  different classes. 
+function toggleBtn(selector) {
+  const button = document.querySelector(selector);
+  if (!button.classList.contains('isToggled')) {
+    button.classList.add('isToggled');
+  } else {
+    button.classList.remove('isToggled');
+  }
+  
+}
+// 10g (1 button can be on/off ) COME BACK TO IT 
+
+//10h 
+   function handleCostKeydown(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+       function calculateTotal() {
+        const inputEle = document.querySelector(".js-costInput");
+        let cost = Number(inputEle.value);
+      
+        if (cost <= 0){  document.querySelector(".errorMsg").innerHTML = 'ERROR: Cost Cannot Be Less Than $0'; inputEle.querySelector(".js-total-cost").classList.remove('js-total-cost');
+      }        
+       if (cost < 40) { 
+          cost = cost + 10;
+           document.querySelector(".js-total-cost").innerHTML = `$${cost}`} 
+       
+}
+    </script>
+  </body>
+</html>
