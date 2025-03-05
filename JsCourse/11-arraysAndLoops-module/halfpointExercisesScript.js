@@ -1,4 +1,4 @@
-//11a
+/*//11a
 const nums = [10, 20, 30];
 nums[2] = 99;
 console.log(nums);
@@ -36,3 +36,22 @@ while (i < 10) {
   i += 2;
   console.log(i);
 }
+//f2
+let j = 5;
+while ( j >=0 ) {
+ console.log( j );
+  
+  j--; //Increment placement matters with while loops. 
+ };
+//11g
+
+let numberList = [1, 2, 3];
+let newNumList = [];
+
+for (let i = 0; i < numberList.length; i++) {
+  let num = numberList[i];
+  newNumList.push(num + 1);
+}
+console.log(newNumList);*/
+
+//11h
