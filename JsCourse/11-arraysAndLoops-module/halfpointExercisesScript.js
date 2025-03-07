@@ -52,6 +52,73 @@ for (let i = 0; i < numberList.length; i++) {
   let num = numberList[i];
   newNumList.push(num + 1);
 }
-console.log(newNumList);*/
+console.log(newNumList);
 
-//11h
+//11h --- "Without return, a function just performs actions (like modifying variables), but you can’t use that result directly in your program. If you want the function to compute something and give you that result, you need to return it"
+function addOne( numberList) { 
+  let newNumList = []; 
+  
+for (let i = 0; i < numberList.length; i++) {
+  let num = numberList[i];
+  newNumList.push(num + 1);
+  }
+  return newNumList
+}; 
+console.log( addOne( [1, 2, 3] ) );
+console.log(addOne([-2, -1,0,99]));
+
+//11i 
+function addOne( numberList,added) { 
+  let newNumList = []; 
+  
+for (let i = 0; i < numberList.length; i++) {
+  let num = numberList[i];
+  newNumList.push(num + added);
+  }
+  return newNumList
+}; 
+console.log( addOne( [1, 2, 3],2 ) );
+console.log(addOne([1, 2, 3], 3));
+console.log(addOne([-2, -1, 0, 99],2));
+
+//11j
+function addArray(array1,array2) { 
+  let newArrayList = []; 
+  for ( let i = 0; i < array1.length; i++ ) { 
+ 
+  newArrayList.push(array1[i] + array2[i]);
+   
+};return newArrayList
+  } 
+  console.log(addArray([1,1,2],[1,1,3]))
+   console.log(addArray([1,2,3], [4,5,6]));
+ 
+
+//11k
+function countPositive(nums) {
+  let count = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > 0) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countPositive([1, -3, 5]));
+console.log(countPositive([-2, 3, -5, 7, 10])); 
+*/
+//11L
+function minMax( nums ) { 
+  let min = 0;
+  let max = 0;
+  for ( let i = 0; i < nums.length; i++ ) { 
+    if ( nums[i] < min ) { max++ }
+   
+
+  } return {min,max}
+
+  
+
+};
+console.log( minMax( [1, -3, 5] ) );
