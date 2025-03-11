@@ -109,16 +109,28 @@ console.log(countPositive([1, -3, 5]));
 console.log(countPositive([-2, 3, -5, 7, 10])); 
 */
 //11L
-function minMax( nums ) { 
-  let min = 0;
-  let max = 0;
-  for ( let i = 0; i < nums.length; i++ ) { 
-    if ( nums[i] < min ) { max++ }
-   
+function minMax(nums) {
+  if (nums.length === 0) {
+    return { min: null, max: null };
+  }
+  let outcome = {
+    min: nums[0],
+    max: nums[0],
+  };
 
-  } return {min,max}
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] < outcome.min) {
+      outcome.min = nums[i];
+    }
 
-  
+    if (nums[i] > outcome.max) {
+      outcome.max = nums[i];
+    }
+  }
+  return outcome;
+}
 
-};
-console.log( minMax( [1, -3, 5] ) );
+console.log(minMax([1, -3, 5]));
+console.log(minMax([-2, 3, -5, 7, 10]));
+console.log(minMax([])); //11mpart1=thought process to get null. min and max should be in one variable to reassign to nothing. therefore an object.
+console.log(minMax([3])); //11m part2
