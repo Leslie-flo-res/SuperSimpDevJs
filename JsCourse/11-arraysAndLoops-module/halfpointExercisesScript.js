@@ -107,7 +107,7 @@ function countPositive(nums) {
 
 console.log(countPositive([1, -3, 5]));
 console.log(countPositive([-2, 3, -5, 7, 10])); 
-*/
+
 //11L
 function minMax(nums) {
   if (nums.length === 0) {
@@ -134,3 +134,16 @@ console.log(minMax([1, -3, 5]));
 console.log(minMax([-2, 3, -5, 7, 10]));
 console.log(minMax([])); //11mpart1=thought process to get null. min and max should be in one variable to reassign to nothing. therefore an object.
 console.log(minMax([3])); //11m part2
+*/
+
+//11n
+
+function countWords(words) {
+  let holder = {};
+  for ( let word of words ) {
+   
+    console.log(holder);
+  }
+}
+
+console.log(countWords(["apple", "grape", "apple", "apple"]));

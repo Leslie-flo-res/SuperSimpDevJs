@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="toDoStyleSheet.css" rel="stylesheet" />
     <title>Arrays And Loops</title>
   </head>
   <body>
     <p>To Do List Practice 1</p>
 
-    <input placeholder="To Do Title" class="js-name-input" />
-    <button onclick="addTodo()">Add</button>
+<div class="todo-input-grid">
+      <input placeholder="To Do Title" class="js-name-input name-input" />
+      <input type="date" class="js-due-date-input dueDate-input" />
+      <button onclick="addTodo()" class="add-btn">Add</button></div>
 
-    <div class="js-todo-list"></div>
+    <div class="js-todo-list todo-grid"></div>
 
     <script src="toDoScript.js"></script>
   </body>
