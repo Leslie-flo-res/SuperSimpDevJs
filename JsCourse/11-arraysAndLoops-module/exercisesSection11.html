@@ -1,30 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest of exercises</title>
+  </head>
+  <body>
+    <script>
+      //11o
+      /*
 const stringArray = [ ];
 
 function findSearch(stringArray) { 
 for ( let i = 0; i < stringArray.length; i++ ) {
   const string = stringArray[i];
   if ( string === "search" ) {
-    return console.log(i)
+    return console.log(`found at index ${i}`)
    }
  
 
   
 
-} return console.log(-1);
+} return console.log('not found in index ');
 
 }
-
-console.log(findSearch(["hello", "world", "search", "good"]));
+//11p - add another search to array
+console.log(findSearch(["hello", "world", "search", "good", "search"]));
 console.log(findSearch(["not", "found"]));
-  </script>
-</body>
+
+
+//11q 
+function findIndex(array,word){
+for ( let i = 0; i < array.length; i++ ) {
+if(array[i]=== word){
+     console.log(`found at index ${i}`);
+     return i;
+   }}
+
+   console.log(-1);
+   return -1;
+
+ 
+
+};
+console.log(findIndex(['green','red','blue','red'],'red'));
+console.log(findIndex(['green','red','blue','red'],'yellow'));
+
+
+
+//11r
+ 
+function removeEgg(foods){
+  const food=[ ];
+for (let i = 0;i < foods.length; i++){
+ 
+  if (foods[i]==='egg'){continue}
+  
+  else food.push(foods[i]);
+}
+return food 
+};
+console.log(removeEgg(['egg','apple','egg','egg','ham']));
+
+
+      //11s helped by AI and research
+      function removeEgg(foods) {
+        const byeEggs = [];
+        let eggCount = 0;
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i] === "egg" && eggCount < 2) {
+            eggCount++;
+            continue;
+          } else byeEggs.push(foods[i]);
+        }
+        return byeEggs;
+      }
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+      */
+//11t
+
+   function removeEgg(foods) {
+        const byeEggs = [];
+        let eggCount = 0;
+        foods.reverse();
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i] === "egg" && eggCount < 2) {
+            eggCount++;
+            continue;
+          } else byeEggs.push(foods[i]);
+        }
+        return byeEggs.reverse();
+      }
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+
+    </script>
+  </body>
 </html>
