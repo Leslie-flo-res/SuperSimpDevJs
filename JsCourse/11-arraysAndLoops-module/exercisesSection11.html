@@ -76,7 +76,7 @@ console.log(removeEgg(['egg','apple','egg','egg','ham']));
         return byeEggs;
       }
       console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
-      */
+     
 //11t
 
    function removeEgg(foods) {
@@ -92,7 +92,39 @@ console.log(removeEgg(['egg','apple','egg','egg','ham']));
         return byeEggs.reverse();
       }
       console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+ 
+      //11u
 
+      function removeEgg(foods) {
+        const byeEggs = [];
+        let eggCount = 0;
+        let foodsCopy = foods.slice();
+        foodsCopy.reverse();
+        for (let i = 0; i < foodsCopy.length; i++) {
+          if (foodsCopy[i] === "egg" && eggCount < 2) {
+            eggCount++;
+            continue;
+          } else byeEggs.push(foodsCopy[i]);
+        }
+        return byeEggs.reverse();
+      }
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+
+*/
+
+      //11v  COME BACK TO ---> still prints 3 instead of fizz  moved the 2 comparisons to top since order of conditions. if %3 hits 15 first it would print fizz while it is also %5
+
+      for (let i = 1; i <= 20; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+        }
+        if (i % 3 === 0) {
+          console.log("Fizz");
+        }
+        if (i % 5 === 0) {
+          console.log("Buzz");
+        } else console.log(i);
+      }
     </script>
   </body>
 </html>
