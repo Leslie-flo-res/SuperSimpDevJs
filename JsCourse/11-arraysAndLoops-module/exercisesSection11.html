@@ -125,25 +125,29 @@ Use else if to specify a new condition to test, if the first condition is false
         } else console.log(i);
       }*/
 
+      //11w
+      function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            console.log(`found at index ${i}`);
+            return i;
+          }
+        }
 
-    //11w
-function findIndex(array,word){
-for ( let i = 0; i < array.length; i++ ) {
-if(array[i]=== word){
-     console.log(`found at index ${i}`);
-     return i;
-   }}
-
-   console.log(-1);
-   return -1;
-
- 
-
-};
-console.log(findIndex(['green','red','blue','red'],'red'));
-console.log(findIndex(['green','red','blue','red'],'yellow'));
-
-
+        console.log(-1);
+        return -1;
+      }
+      //NOTES : how to include previous function , while having 2 arguments... change an arug to new functions like result ?... or using the fact array is in both functions... need to compare the indexes to see if it holds a duplicate.....found answer with chat help and teachers answer...close but messed up on using array as an arugment and not result 
+      function unique(array) {
+        let result = [];
+        for (let i = 0; i < array.length; i++) {
+          let word=array[i];
+          if (findIndex(result, word)===-1) {
+          result.push(word);}
+        } return result
+      }
+       console.log(unique(['green','red','blue','red']));
+      // console.log(unique(['red','green','green','red']));
     </script>
   </body>
 </html>
