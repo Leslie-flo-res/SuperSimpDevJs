@@ -5,6 +5,8 @@ if (savedTodos) {
   todoList.push(...JSON.parse(savedTodos));
 }
 renderTodoList();
+
+
 function renderTodoList() {
   let todoListHTML = "";
   for (let i = 0; i < todoList.length; i++) {
@@ -24,6 +26,13 @@ function renderTodoList() {
   localStorage.setItem("todoList", JSON.stringify(todoList));
   document.querySelector(".js-todo-list").innerHTML = todoListHTML;
 };
+
+
+
+
+
+
+
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
   const name = inputElement.value;
