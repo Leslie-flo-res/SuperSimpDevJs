@@ -40,13 +40,24 @@ function run(param){
 };
 run(function (){
   console.log('hello4')
-});*/
+});
 
 setTimeout(function(){console.log('timeout')},3000);
 console.log('next line');
 
 //setInterval(function(){console.log('interval at 3seconds'),3000});
-//console.log('next line 2 ');
+//console.log('next line 2 ');*/
+
+['make dinner',
+'wash dishes',
+'watch youtube'
+].forEach(function(value,index){
+
+  if (value==='wash dishes'){ return}
+console.log(index)
+  console.log(value);
+
+});
 
 
 </script>
