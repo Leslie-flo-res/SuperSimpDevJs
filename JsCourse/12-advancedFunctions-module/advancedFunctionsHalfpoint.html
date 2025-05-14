@@ -10,6 +10,13 @@
     <br />
     <br />
     <button onclick="addedToCart();">Add To Cart</button>
+    <br />
+    <p>Buttons for Title +/-</p>
+    <div>
+      <button id="increase">+</button>
+      <button id="decrease">-</button>
+    </div>
+
     <script>
       //12a
       const add = function () {
@@ -58,22 +65,76 @@ function removeAdded(){
           addedText.remove();
         }, 1000);
       }*/
-     //12f
-let addedText;let timeoutID
+      //12f
+      let addedText;
+      let timeoutID;
 
       function addedToCart() {
-       if (!addedText) {
-    addedText = document.createElement("p");
-    addedText.textContent = "Added";
-    document.body.appendChild(addedText);
-  }
-    clearTimeout(timeoutID);
-     timeoutID=setTimeout(function () {
+        if (!addedText) {
+          addedText = document.createElement("p");
+          addedText.textContent = "Added";
+          document.body.appendChild(addedText);
+        }
+        clearTimeout(timeoutID);
+        timeoutID = setTimeout(function () {
           addedText.remove();
-          addedText="";
+          addedText = "";
         }, 1000);
       }
       
+      
+      //12g set up interval to rotate messages.
+      //12h buttons to decrease and increase.
+
+      let messages = 2;
+      let showAlert = true;
+
+      function titleChange() {
+        document
+          .getElementById("increase")
+          .addEventListener("click", function () {
+            if (messages < 10) {
+              messages++;
+              console.log(messages);
+              updateTitle();
+            }
+          });
+
+        document
+          .getElementById("decrease")
+          .addEventListener("click", function () {
+            if (messages > 0) {
+              messages--;
+              updateTitle();
+              console.log(messages);
+            }
+          });
+
+        function updateTitle() {
+          if (messages === 0) {
+            document.title = "App";
+          }
+          if (messages > 0) {
+            document.title = `(${messages}) New Messages`;
+          }
+        }
+
+        console.log(messages);
+
+        setInterval(function () {
+          if (messages > 0) {
+            if (showAlert) {
+              document.title = `(${messages}) New Messages`;
+            } else {
+              document.title = "App";
+            }
+          }
+
+          showAlert = !showAlert;
+        }, 1000);
+      } //end of function
+
+      titleChange();
     </script>
   </body>
 </html>
