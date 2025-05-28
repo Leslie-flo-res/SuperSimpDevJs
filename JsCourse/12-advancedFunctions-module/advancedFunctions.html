@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Functions </title>
-</head>
-<body>
-  
-<script>
-  /*
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button onclick="" class="js-button">Click</button>
+
+    <script>
+      const buttonElement = document.querySelector(".js-button");
+      buttonElement.addEventListener("click", () => {
+        console.log("clicked");
+      });
+      /*
 function greeting(){console.log('hello')};
 greeting();
 const function1= function greeting(){
@@ -46,7 +51,7 @@ setTimeout(function(){console.log('timeout')},3000);
 console.log('next line');
 
 //setInterval(function(){console.log('interval at 3seconds'),3000});
-//console.log('next line 2 ');*/
+//console.log('next line 2 ');
 
 ['make dinner',
 'wash dishes',
@@ -57,10 +62,7 @@ console.log('next line');
 console.log(index)
   console.log(value);
 
-});
-
-
-</script>
-
-</body>
+});*/
+    </script>
+  </body>
 </html>
